@@ -1,5 +1,5 @@
-import request from '../../__mocks__/request';
+import request from './request';
 
-export const getUserName = async (userID: number) => {
-  return await request(`/users/${userID}`).then(user => user.name);
+export function getUserName(userID: number) {
+  return request(`/users/${userID}`).then((user: { name:string}) => user.name);
 }

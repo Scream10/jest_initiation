@@ -1,17 +1,18 @@
+// Mocks is used to fake promise and not used the real API network
 const users = {
-    4: {name: 'Mark'},
-    5: {name: 'Paul'},
-  };
-  
-  export default function request(url) {
-    return new Promise((resolve, reject) => {
-      const userID = parseInt(url.substr('/users/'.length), 10);
-      process.nextTick(() =>
-        users[userID]
-          ? resolve(users[userID])
-          : reject({
-              error: `Utilisateur avec ${userID} non trouvé.`,
-            }),
-      );
-    });
-  }
+  4: {name: 'Mark'},
+  5: {name: 'Paul'},
+};
+
+export default function request(url) {
+  return new Promise((resolve, reject) => {
+    const userID = parseInt(url.substr('/users/'.length), 10);
+    process.nextTick(() =>
+      users[userID]
+        ? resolve(users[userID])
+        : reject({
+            error: `Utilisateur avec ${userID} non trouvé.`,
+          }),
+    );
+  });
+}

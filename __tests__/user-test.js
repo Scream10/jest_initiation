@@ -1,4 +1,4 @@
-jest.mock('../__mocks__/request.js');
+jest.mock('../src/api/request');
 
 import * as user from '../src/api/user';
 
