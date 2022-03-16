@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`check and compare user 1`] = `
+Object {
+  "createdAt": Any<Date>,
+  "id": Any<Number>,
+  "name": Any<String>,
+}
+`;
+
 exports[`render correctly 1`] = `
 <View
   style={
@@ -13,6 +21,10 @@ exports[`render correctly 1`] = `
 >
   <Text>
     Open up App.js to start working on your app!
+  </Text>
+  <Text>
+    My name is 
+    LeBron James
   </Text>
 </View>
 `;
